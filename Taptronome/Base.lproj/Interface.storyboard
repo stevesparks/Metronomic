@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8121.17" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc" defaultGlanceController="Sv0-Ai-Zie">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8066.14"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <picker width="1" height="30" alignment="left" focusStyle="stack" id="TBN-8r-GzR">
+                            <connections>
+                                <action selector="crownChanged:" destination="AgC-eL-Hgc" id="qEa-ne-LuI"/>
+                            </connections>
+                        </picker>
+                        <switch width="1" alignment="left" value="YES" title="Taptic" id="rKS-eA-AZ5">
+                            <connections>
+                                <action selector="tapticSwitchChanged:" destination="AgC-eL-Hgc" id="A6u-9z-H6L"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Run in BG" id="sOL-BB-Ix3">
+                            <connections>
+                                <action selector="runInBackgroundChanged:" destination="AgC-eL-Hgc" id="2qL-w6-6JH"/>
+                            </connections>
+                        </switch>
+                        <button width="1" height="32" alignment="left" title="STOP" id="awH-cz-vvQ">
+                            <color key="backgroundColor" red="0.75304615829999999" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                            <connections>
+                                <action selector="stopButtonTapped" destination="AgC-eL-Hgc" id="bWd-Ic-4b9"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="bpmPicker" destination="TBN-8r-GzR" id="IKf-xW-JxS"/>
+                        <outlet property="stopButton" destination="awH-cz-vvQ" id="D7P-7O-Y2h"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="164" y="217"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="rjY-Ar-IMT">
+            <objects>
+                <glanceController spacing="0.0" id="Sv0-Ai-Zie" customClass="GlanceController">
+                    <items>
+                        <group alignment="left" id="gv7-I2-MZq"/>
+                        <group alignment="left" id="eew-Gs-W6Y"/>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="164" y="514"/>
+        </scene>
+    </scenes>
+</document>
