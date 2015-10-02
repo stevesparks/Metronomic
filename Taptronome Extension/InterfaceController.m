@@ -36,7 +36,7 @@
 
 - (void)willActivate {
     [super willActivate];
-    [self.bpmPicker focusForCrownInput];
+    [self.bpmPicker focus];
     [self updateUI];
 }
 
